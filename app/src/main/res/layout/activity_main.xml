@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StockDetailsActivity">
+
+    <Spinner
+        android:id="@+id/stocksspinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:spinnerMode="dialog" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/stocksaddedrv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/totalvalue"
+        android:layout_below="@id/stocksspinner">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="Save"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/totalcurrentvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/save"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:padding="5dp"
+        android:text="TextView"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/totalvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/totalcurrentvalue"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:padding="5dp"
+        android:text="TextView" />
+
+</RelativeLayout>
